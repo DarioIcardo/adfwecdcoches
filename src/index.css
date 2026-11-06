@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --wine-primary: #580318;
+    --wine-light: #8c0b2c;
+    --wine-bright: #b8143d;
+    --metal-primary: #92979d;
+    --metal-light: #b8bcc2;
+    --dark-surface: #070405;
+  }
+
+  html {
+    background-color: #000000;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom Webkit Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(88, 3, 24, 0.6);
+    border: 1px solid rgba(146, 151, 157, 0.2);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(184, 20, 61, 0.85);
+  }
+}
+
+@layer utilities {
+  .text-glow-wine {
+    text-shadow: 0 0 14px rgba(184, 20, 61, 0.7), 0 0 28px rgba(88, 3, 24, 0.45);
+  }
+  
+  .text-glow-metal {
+    text-shadow: 0 0 12px rgba(184, 188, 194, 0.5);
+  }
+
+  .box-glow-wine {
+    box-shadow: 0 0 25px rgba(88, 3, 24, 0.5), inset 0 0 15px rgba(88, 3, 24, 0.15);
+  }
+
+  .box-glow-wine-lg {
+    box-shadow: 0 0 50px rgba(88, 3, 24, 0.7), 0 0 20px rgba(184, 20, 61, 0.35), inset 0 0 25px rgba(88, 3, 24, 0.2);
+  }
+
+  .glass-panel-luxury {
+    background: rgba(8, 5, 7, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(146, 151, 157, 0.22);
+  }
+
+  .glass-panel-hover {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-panel-hover:hover {
+    background: rgba(16, 8, 12, 0.94);
+    border-color: rgba(184, 20, 61, 0.6);
+    box-shadow: 0 15px 45px -10px rgba(88, 3, 24, 0.45);
+  }
+
+  .bg-noise {
+    background-image: radial-gradient(rgba(146, 151, 157, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
